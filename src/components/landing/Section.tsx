@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import type { SectionProps } from "@/types"
 
-export default function Section({ id, title, subtitle, content, isActive, showButton, buttonText, onButtonClick, showButton2, buttonText2, buttonUrl2 }: SectionProps) {
+export default function Section({ id, title, subtitle, content, isActive, showButton, buttonText, onButtonClick, showButton2, buttonText2, buttonUrl2, showButton3, buttonText3, buttonUrl3 }: SectionProps) {
   const [copied, setCopied] = useState(false)
 
   const handleCopy = () => {
@@ -42,7 +42,7 @@ export default function Section({ id, title, subtitle, content, isActive, showBu
           {content}
         </motion.p>
       )}
-      {(showButton || showButton2) && (
+      {(showButton || showButton2 || showButton3) && (
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isActive ? { opacity: 1, y: 0 } : {}}
@@ -67,6 +67,16 @@ export default function Section({ id, title, subtitle, content, isActive, showBu
               onClick={handleCopy}
             >
               {copied ? '✅ Скопировано!' : buttonText2}
+            </Button>
+          )}
+          {showButton3 && (
+            <Button
+              variant="outline"
+              size="lg"
+              className="text-red-500 bg-transparent border-red-500 hover:bg-red-500 hover:text-white transition-colors"
+              onClick={() => buttonUrl3 && window.open(buttonUrl3, '_blank')}
+            >
+              {buttonText3}
             </Button>
           )}
         </motion.div>

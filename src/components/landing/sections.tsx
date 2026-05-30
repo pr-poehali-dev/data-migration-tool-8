@@ -32,6 +32,9 @@ export const sections = [
     buttonText: 'Начать общаться',
     showButton2: true,
     buttonText2: 'Мой сервер',
-    buttonUrl2: 'https://WoroldNegzy.aternos.me:47632'
+    buttonUrl2: 'https://WoroldNegzy.aternos.me:47632',
+    showButton3: true,
+    buttonText3: 'www.youtube.com/@Destiny_oficial',
+    buttonUrl3: 'https://www.youtube.com/@Destiny_oficial'
   },
 ]
