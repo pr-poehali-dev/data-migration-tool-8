@@ -50,14 +50,25 @@ export default function Section({ id, title, subtitle, content, isActive, showBu
           className="mt-12 md:mt-16 flex flex-wrap gap-4"
         >
           {showButton && (
-            <Button
-              variant="outline"
-              size="lg"
-              className="text-white bg-black border-black hover:bg-gray-900 hover:text-white transition-colors"
-              onClick={onButtonClick}
-            >
-              {buttonText}
-            </Button>
+            <div className="flex flex-col items-start gap-2">
+              <Button
+                variant="outline"
+                size="lg"
+                className="text-white bg-black border-black hover:bg-gray-900 hover:text-white transition-colors"
+                onClick={onButtonClick}
+              >
+                {buttonText}
+              </Button>
+              <div className="flex items-center gap-1 text-yellow-400 text-sm font-medium">
+                <motion.span
+                  animate={{ y: [0, -4, 0] }}
+                  transition={{ duration: 1, repeat: Infinity }}
+                >
+                  ↑
+                </motion.span>
+                <span>Здесь розыгрыш на тесто и тигра</span>
+              </div>
+            </div>
           )}
           {showButton2 && (
             <Button
