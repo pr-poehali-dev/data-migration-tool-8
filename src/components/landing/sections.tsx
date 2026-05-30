@@ -29,7 +29,7 @@ export const sections = [
     title: 'Мои соцсети и мой сервер',
     content: 'Один шаг — и ты уже в Destiny. Нажми кнопку и начни своё первое общение прямо сейчас.',
     showButton: true,
-    buttonText: 'Начать общаться',
+    buttonText: 'Мой дискорд',
     showButton2: true,
     buttonText2: 'Мой сервер',
     buttonUrl2: 'https://WoroldNegzy.aternos.me:47632',
