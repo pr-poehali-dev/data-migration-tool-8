@@ -2,7 +2,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import type { SectionProps } from "@/types"
 
-export default function Section({ id, title, subtitle, content, isActive, showButton, buttonText, onButtonClick }: SectionProps) {
+export default function Section({ id, title, subtitle, content, isActive, showButton, buttonText, onButtonClick, showButton2, buttonText2, buttonUrl2 }: SectionProps) {
   return (
     <section id={id} className="relative h-screen w-full snap-start flex flex-col justify-center p-8 md:p-16 lg:p-24">
       {subtitle && (
@@ -33,21 +33,33 @@ export default function Section({ id, title, subtitle, content, isActive, showBu
           {content}
         </motion.p>
       )}
-      {showButton && (
+      {(showButton || showButton2) && (
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isActive ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-12 md:mt-16"
+          className="mt-12 md:mt-16 flex flex-wrap gap-4"
         >
-          <Button
-            variant="outline"
-            size="lg"
-            className="text-[#FF4D00] bg-transparent border-[#FF4D00] hover:bg-[#FF4D00] hover:text-black transition-colors"
-            onClick={onButtonClick}
-          >
-            {buttonText}
-          </Button>
+          {showButton && (
+            <Button
+              variant="outline"
+              size="lg"
+              className="text-[#FF4D00] bg-transparent border-[#FF4D00] hover:bg-[#FF4D00] hover:text-black transition-colors"
+              onClick={onButtonClick}
+            >
+              {buttonText}
+            </Button>
+          )}
+          {showButton2 && (
+            <Button
+              variant="outline"
+              size="lg"
+              className="text-white bg-transparent border-white hover:bg-white hover:text-black transition-colors"
+              onClick={() => buttonUrl2 && window.open(buttonUrl2, '_blank')}
+            >
+              {buttonText2}
+            </Button>
+          )}
         </motion.div>
       )}
     </section>

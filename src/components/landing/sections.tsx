@@ -29,6 +29,9 @@ export const sections = [
     title: 'Готов начать?',
     content: 'Один шаг — и ты уже в Destiny. Нажми кнопку и начни своё первое общение прямо сейчас.',
     showButton: true,
-    buttonText: 'Начать общаться'
+    buttonText: 'Начать общаться',
+    showButton2: true,
+    buttonText2: 'WoroldNegzy.aternos.me:47632',
+    buttonUrl2: 'https://WoroldNegzy.aternos.me:47632'
   },
 ]
