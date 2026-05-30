@@ -67,7 +67,7 @@ export default function LandingPage() {
             key={section.id}
             {...section}
             isActive={index === activeSection}
-            onButtonClick={index === 0 ? () => handleNavClick(sections.length - 1) : undefined}
+            onButtonClick={index === 0 ? () => handleNavClick(sections.length - 1) : index === sections.length - 1 ? () => window.open('https://discord.com/channels/1507381378289766470/1507381379497984121', '_blank') : undefined}
           />
         ))}
       </div>
