@@ -26,7 +26,7 @@ export const sections = [
   },
   {
     id: 'join',
-    title: 'Готов начать?',
+    title: 'Мои соцсети и мой сервер',
     content: 'Один шаг — и ты уже в Destiny. Нажми кнопку и начни своё первое общение прямо сейчас.',
     showButton: true,
     buttonText: 'Начать общаться',
