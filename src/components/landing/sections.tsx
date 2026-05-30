@@ -35,6 +35,9 @@ export const sections = [
     buttonUrl2: 'https://WoroldNegzy.aternos.me:47632',
     showButton3: true,
     buttonText3: 'Мой ютуб канал',
-    buttonUrl3: 'https://www.youtube.com/@Destiny_oficial'
+    buttonUrl3: 'https://www.youtube.com/@Destiny_oficial',
+    showButton4: true,
+    buttonText4: 'Наш ВК с ROF',
+    buttonUrl4: 'https://vk.com/destiny_rof'
   },
 ]

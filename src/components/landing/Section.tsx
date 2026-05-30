@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import type { SectionProps } from "@/types"
 
-export default function Section({ id, title, subtitle, content, isActive, showButton, buttonText, onButtonClick, showButton2, buttonText2, buttonUrl2, showButton3, buttonText3, buttonUrl3 }: SectionProps) {
+export default function Section({ id, title, subtitle, content, isActive, showButton, buttonText, onButtonClick, showButton2, buttonText2, buttonUrl2, showButton3, buttonText3, buttonUrl3, showButton4, buttonText4, buttonUrl4 }: SectionProps) {
   const [copied, setCopied] = useState(false)
 
   const handleCopy = () => {
@@ -42,7 +42,7 @@ export default function Section({ id, title, subtitle, content, isActive, showBu
           {content}
         </motion.p>
       )}
-      {(showButton || showButton2 || showButton3) && (
+      {(showButton || showButton2 || showButton3 || showButton4) && (
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isActive ? { opacity: 1, y: 0 } : {}}
@@ -77,6 +77,16 @@ export default function Section({ id, title, subtitle, content, isActive, showBu
               onClick={() => buttonUrl3 && window.open(buttonUrl3, '_blank')}
             >
               {buttonText3}
+            </Button>
+          )}
+          {showButton4 && (
+            <Button
+              variant="outline"
+              size="lg"
+              className="text-blue-400 bg-transparent border-blue-400 hover:bg-blue-400 hover:text-white transition-colors"
+              onClick={() => buttonUrl4 && window.open(buttonUrl4, '_blank')}
+            >
+              {buttonText4}
             </Button>
           )}
         </motion.div>

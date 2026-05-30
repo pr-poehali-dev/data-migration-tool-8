@@ -13,6 +13,9 @@ export interface Section {
   showButton3?: boolean
   buttonText3?: string
   buttonUrl3?: string
+  showButton4?: boolean
+  buttonText4?: string
+  buttonUrl4?: string
 }
 
 export interface SectionProps extends Section {
