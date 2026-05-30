@@ -31,7 +31,7 @@ export const sections = [
     showButton: true,
     buttonText: 'Начать общаться',
     showButton2: true,
-    buttonText2: 'WoroldNegzy.aternos.me:47632',
+    buttonText2: 'Мой сервер',
     buttonUrl2: 'https://WoroldNegzy.aternos.me:47632'
   },
 ]
