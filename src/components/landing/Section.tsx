@@ -1,8 +1,17 @@
+import { useState } from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import type { SectionProps } from "@/types"
 
 export default function Section({ id, title, subtitle, content, isActive, showButton, buttonText, onButtonClick, showButton2, buttonText2, buttonUrl2 }: SectionProps) {
+  const [copied, setCopied] = useState(false)
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(buttonText2 || '')
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
+
   return (
     <section id={id} className="relative h-screen w-full snap-start flex flex-col justify-center p-8 md:p-16 lg:p-24">
       {subtitle && (
@@ -55,9 +64,9 @@ export default function Section({ id, title, subtitle, content, isActive, showBu
               variant="outline"
               size="lg"
               className="text-white bg-transparent border-white hover:bg-white hover:text-black transition-colors"
-              onClick={() => buttonUrl2 && window.open(buttonUrl2, '_blank')}
+              onClick={handleCopy}
             >
-              {buttonText2}
+              {copied ? '✅ Скопировано!' : buttonText2}
             </Button>
           )}
         </motion.div>
