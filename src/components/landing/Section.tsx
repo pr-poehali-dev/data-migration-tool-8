@@ -7,7 +7,7 @@ export default function Section({ id, title, subtitle, content, isActive, showBu
   const [copied, setCopied] = useState(false)
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(buttonText2 || '')
+    navigator.clipboard.writeText('WoroldNegzy.aternos.me:47632')
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
   }
